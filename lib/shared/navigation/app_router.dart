@@ -13,13 +13,16 @@ class AppRouter {
         path: "/booking_details",
         pageBuilder: (context, state) {
           return CustomTransitionPage(
-              key: state.pageKey,
-              opaque: false,
-              barrierColor: appBlack.withOpacity(0.5),
-              transitionDuration: const Duration(microseconds: 300),
-              child: const BookingDetailsScreen(),
-              transitionsBuilder:
-                  (context, animation, secondaryAnimation, child) => child);
+            key: state.pageKey,
+            opaque: false,
+            barrierColor: appBlack.withOpacity(0.5),
+            transitionDuration: const Duration(microseconds: 300),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return child;
+            },
+            child: const BookingDetailsScreen(),
+          );
         }),
   ]);
 }

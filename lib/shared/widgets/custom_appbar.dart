@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Expanded(
               child: GestureDetector(
                 onTap: () {
-                  context.goNamed("booking_details");
+                  context.pushNamed("booking_details");
                 },
                 child: Hero(
                   tag: "search-widget",
