@@ -1,3 +1,4 @@
+import 'package:airbnb_clone/models/property.dart';
 import 'package:airbnb_clone/shared/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,7 +15,14 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: CustomAppBar(textTheme: textTheme),
-      body: Container(),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ListView.builder(
+            itemCount: Property.sampleData.length,
+            itemBuilder: (context, index) {
+              return PropertyCard(property: Property.sampleData[index]);
+            }),
+      ),
     );
   }
 }

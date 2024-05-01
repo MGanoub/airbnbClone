@@ -18,8 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       flexibleSpace: Stack(
         children: [
           // type of properties listed
-          const Positioned(
-              bottom: 0, left: 0, right: 0, child: PropertyTypeList()),
+          Positioned(bottom: 0, left: 0, right: 0, child: PropertyTypeList()),
           // search input
           Positioned(
             left: 16,
